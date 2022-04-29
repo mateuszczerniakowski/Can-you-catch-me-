@@ -1,0 +1,158 @@
+@import url('https://fonts.googleapis.com/css2?family=Amatic+SC:wght@400;700&display=swap');
+
+html {
+    box-sizing: border-box;
+    font-size: 10px;
+    background: #097bd8;
+  }
+  
+  *, *:before, *:after {
+    box-sizing: inherit;
+  }
+  
+  body {
+    padding: 0;
+    margin: 0;
+    font-family: 'Amatic SC', cursive;
+  }
+  
+  h1{
+    text-align: center;
+    font-size: 8rem;
+    line-height: 1;
+    margin-bottom: 0;
+  }
+  h2 {
+    text-align: center;
+    font-size: 6rem;
+    margin: 10px;
+  }
+
+  h3 {
+    font-size: 3rem;
+    text-align: center;
+    margin: 0;
+    margin-right: 10px;
+  }
+
+  .levels {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    height: 50px;
+    width: 100%;
+}
+.btn {
+    margin-inline: 10px;
+    background-color: rgba(255,255,255,0.2);
+    border: none;
+    border-radius: 6px;
+    height: 30px;
+    color: black;
+    font-weight: 400;
+    transition: all 0.3s;
+    text-align: center;
+}
+
+.btn:hover {
+    transform: scale(110%);
+    cursor: pointer;
+}
+.btn-active {
+    background-color: whitesmoke;
+    transform: scale(103%);
+    box-shadow: 0px 0px 2px whitesmoke;
+}
+
+#btn-start {
+    display: flex;
+    margin: 10px auto;
+    height: 40px;
+    align-items: center;
+    width: 80px;
+    border-radius: 6px;
+    justify-content: center;
+    border: none;
+    background-color: rgb(205, 9, 9);
+    font-family: 'Amatic SC', cursive;
+    font-weight: bold;
+    font-size: 3rem;
+    cursor: pointer;
+}
+  
+  .score {
+    background: rgba(255,255,255,0.2);
+    padding: 0 3rem;
+    line-height: 1;
+    border-radius: 1rem;
+  }
+  
+/* .game {
+    width: 800px;
+    height: 500px;
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr;
+    margin: 0 auto;
+    /* background-color: #fff; */
+    /* flex-direction: row;
+    align-items: center;
+    justify-items: center;
+} */ 
+ 
+
+.game {
+  width: 600px;
+  height: 400px;
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0 auto;
+}
+/* 
+.hole {
+    flex: 1 0 33.33%;
+    overflow: hidden;
+    position: relative;
+    background: url(./assets/images/cloud.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: 200px;
+    height: 200px;
+    margin-top: 100px;
+  } */
+
+
+   .hole {
+    flex: 1 0 33.33%;
+    overflow: hidden;
+    position: relative;
+  }
+  
+  .hole:after {
+    display: block;
+    background: url(./assets/images/cloud.svg) bottom center no-repeat;
+    background-size: contain;
+    content: '';
+    width: 100%;
+    height: 120px;
+    position: absolute;
+    z-index: 2;
+    bottom: -12px;
+  }
+  
+  .mole {
+    background: url(./assets/images/mole.svg) bottom center no-repeat;
+    background-size: 60%;
+    position: absolute;
+    top: 100%;
+    width: 100%;
+    height: 100%;
+    transition:all 0.4s;
+    /* z-index: 1; */
+    /* overflow: hidden; */
+  }
+  
+  .hole.up .mole {
+    top: 0;
+  }
